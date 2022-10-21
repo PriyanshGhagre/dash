@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { applicantStatic } from "../data/content";
 import {
   GridComponent,
   ColumnsDirective,
@@ -36,7 +37,8 @@ const Applicants = () => {
         },
         (error) => {
           setIsLoaded(true);
-          setError(error);
+          setItems(applicantStatic.body.applicants)
+          // setError(error);
         }
       );
   }, []);
