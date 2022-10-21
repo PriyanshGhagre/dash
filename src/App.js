@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 
 import { HomePage, Navbar, Footer, Sidebar, ThemeSettings } from './components'
-import { Applicants, Status } from './pages'
+import { Applicants, Status, Listings } from './pages'
 import { useStateContext } from './contexts/ContextProvider'
 import './App.css'
 
