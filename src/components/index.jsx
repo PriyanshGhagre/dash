@@ -9,3 +9,5 @@ export { default as Trending } from './Trending';
 export { default as Best } from './Best';
 export { default as Search } from './Search';
 export { default as Header } from './Header';
+export { default as FormHeader } from './FormHeader';
+export { default as FormInput } from './FormInput';

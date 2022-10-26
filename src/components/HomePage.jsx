@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card } from ".";
+import { listings } from "../data/content"
 
 const HomePage = () => {
   const [error, setError] = useState(null);
@@ -17,7 +18,8 @@ const HomePage = () => {
         },
         (error) => {
           setIsLoaded(true);
-          setError(error);
+          setItems(listings.body.listings);
+          // setError(error);
         }
       );
   }, []);
