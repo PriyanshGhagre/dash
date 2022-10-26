@@ -6,6 +6,72 @@ import { IoMdContacts } from 'react-icons/io';
 import { RiContactsLine } from 'react-icons/ri';
 import {  GiArchiveRegister } from 'react-icons/gi';
 
+export const loginFields=[
+  {
+      labelText:"Email address",
+      labelFor:"email-address",
+      id:"email-address",
+      name:"email",
+      type:"email",
+      autoComplete:"email",
+      isRequired:true,
+      placeholder:"Email address"   
+  },
+  {
+      labelText:"Password",
+      labelFor:"password",
+      id:"password",
+      name:"password",
+      type:"password",
+      autoComplete:"current-password",
+      isRequired:true,
+      placeholder:"Password"   
+  }
+]
+
+export const signupFields=[
+  {
+      labelText:"Username",
+      labelFor:"username",
+      id:"username",
+      name:"username",
+      type:"text",
+      autoComplete:"username",
+      isRequired:true,
+      placeholder:"Username"   
+  },
+  {
+      labelText:"Email address",
+      labelFor:"email-address",
+      id:"email-address",
+      name:"email",
+      type:"email",
+      autoComplete:"email",
+      isRequired:true,
+      placeholder:"Email address"   
+  },
+  {
+      labelText:"Password",
+      labelFor:"password",
+      id:"password",
+      name:"password",
+      type:"password",
+      autoComplete:"current-password",
+      isRequired:true,
+      placeholder:"Password"   
+  },
+  {
+      labelText:"Confirm Password",
+      labelFor:"confirm-password",
+      id:"confirm-password",
+      name:"confirm-password",
+      type:"password",
+      autoComplete:"confirm-password",
+      isRequired:true,
+      placeholder:"Confirm Password"   
+  }
+]
+
 export const links = [
     {
       title: 'Dashboard',
@@ -42,11 +108,11 @@ export const links = [
           icon: <AiOutlineLogin />,
         },
         {
-          name: 'Register',
+          name: 'register',
           icon: <GiArchiveRegister />,
         },
         {
-          name: 'Post Job',
+          name: 'post job',
           icon: <FiEdit />,
         }
       ],
