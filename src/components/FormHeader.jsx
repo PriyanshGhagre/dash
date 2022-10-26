@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const FormHeader = ({ heading, paragraph, linkName, linkUrl = "#" }) => {
   return (
     <div className="mb-10">
-      <div className="flex justify-center"><SiShopware /></div>
-      <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+      <div className="flex justify-center text-3xl"><SiShopware /></div>
+      <h2 className="mt-2 text-center text-3xl font-extrabold text-gray-900">
         {heading}
       </h2>
       <p className="mt-2 text-center text-sm text-gray-600">
