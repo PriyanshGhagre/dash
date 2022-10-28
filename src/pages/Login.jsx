@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { TextBoxComponent } from "@syncfusion/ej2-react-inputs";
 import { FormHeader, FormInput, FormExtra, FormAction } from "../components";
 import {} from "../components";
 import { loginFields } from "../data/content";
@@ -15,10 +14,28 @@ const Login = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    // console.log(e)
     authenticateUser();
   };
 
-  const authenticateUser = () => {};
+  const authenticateUser = () => {
+    fetch("http://localhost:8000/api/v1/login", {
+      method: "POST",
+      body: JSON.stringify(loginState),
+      headers: {
+          "Content-type": "application/json; charset=UTF-8"
+      }
+  })
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          console.log(result);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  };
 
   return (
     <>
@@ -47,8 +64,11 @@ const Login = () => {
             ))}
           </div>
 
-          {/* <FormExtra /> */}
-          <FormAction handleSubmit={handleSubmit} text="Login" />
+          {/* <FormAction handleSubmit={handleSubmit} text="Login" /> */}
+          <button
+          className="group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 mt-10"
+          onClick={handleSubmit}
+        >Login</button>
         </form>
       </div>
     </>

@@ -36,7 +36,7 @@ const HomePage = () => {
             {items.map((item) => (
               <li key={item.id}>
                 
-                <Card title={item.title} content={item.description} />
+                <Card title={item.title} content={item.description} tags={item.tags} />
               </li>
             ))}
           </ul>

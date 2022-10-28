@@ -43,7 +43,7 @@ const App = () => {
                     <div>
                         <Routes>
                             {/* Dashboard */}
-                            <Route path="/" element={<Login />} />
+                            <Route path="/" element={<HomePage />} />
                             <Route path="/homepage" element={<HomePage />} />
                             {/* Pages */}
                             <Route path="/listings" element={<Listings />} />
@@ -51,7 +51,7 @@ const App = () => {
                             <Route path="/status" element={<Status />} />
                             {/* Forms */}
                             <Route path="/login" element={<Login />} />
-                            <Route path="/Register" element={<Register />} />
+                            <Route path="/register" element={<Register />} />
                             {/* <Route path="/post-job" element={<Status />} /> */}
                         </Routes>
                     </div>

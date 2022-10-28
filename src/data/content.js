@@ -9,8 +9,8 @@ import {  GiArchiveRegister } from 'react-icons/gi';
 export const loginFields=[
   {
       labelText:"Email address",
-      labelFor:"email-address",
-      id:"email-address",
+      labelFor:"email",
+      id:"email",
       name:"email",
       type:"email",
       autoComplete:"email",
@@ -42,8 +42,8 @@ export const signupFields=[
   },
   {
       labelText:"Email address",
-      labelFor:"email-address",
-      id:"email-address",
+      labelFor:"email",
+      id:"email",
       name:"email",
       type:"email",
       autoComplete:"email",
@@ -104,7 +104,7 @@ export const links = [
       title: 'Forms',
       links: [
         {
-          name: 'Login',
+          name: 'login',
           icon: <AiOutlineLogin />,
         },
         {

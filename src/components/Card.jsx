@@ -1,6 +1,12 @@
 import React from "react";
+import {
+  ChipListComponent,
+  ChipsDirective,
+  ChipDirective,
+} from "@syncfusion/ej2-react-buttons";
 
-const Card = ({ title, content }) => {
+const Card = ({ title, content, tags }) => {
+  let tagList = tags.split(',')
   return (
     <div className="mt-2">
       <div className="e-card" id="basic">
@@ -10,6 +16,13 @@ const Card = ({ title, content }) => {
           </div>
         </div>
         <div className="e-card-content">{content}</div>
+        <ChipListComponent id="chip-avatar">
+          <ChipsDirective className="float-left">
+             {tagList.map((tag) => (
+                <ChipDirective text={tag} className="float-left"></ChipDirective> 
+             ))}  
+          </ChipsDirective>
+        </ChipListComponent>
       </div>
     </div>
   );

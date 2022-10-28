@@ -2,7 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { SiShopware } from "react-icons/si";
 import { MdOutlineCancel } from "react-icons/md";
-import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+import ReactTooltip from "react-tooltip";
 import { links } from "../data/content";
 import { useStateContext } from "../contexts/ContextProvider";
 
@@ -29,17 +29,17 @@ const Sidebar = () => {
             >
               <SiShopware /> <span>Laragigs</span>
             </Link>
-            <TooltipComponent content="Menu" position="BottomCenter">
               <button
                 type="button"
                 onClick={() =>
                   setActiveMenu((prevActiveMenu) => !prevActiveMenu)
                 }
                 className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
+                data-tip="Menu"
               >
                 <MdOutlineCancel />
               </button>
-            </TooltipComponent>
+            <ReactTooltip />
           </div>
           <div className="mt-10">
             {links.map((item) => (
